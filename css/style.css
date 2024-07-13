@@ -107,6 +107,29 @@ header {
     }
  }
 
+ .strikethrough {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+ }
+
+ .strikethrough::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #421a00;
+    animation: strikeThrough 1s forwards;
+ }
+
+ @keyframes strikeThrough {
+    to {
+        width: 100%;
+    }
+ }
+
 
 main {
     width: 100%;
@@ -282,4 +305,36 @@ input::placeholder {
 
 #text-forgot-pwd {
     padding-bottom: 10px;
+}
+
+
+/* ~~~ COUNTRIES ~~~ */
+
+.edit-btn, .remove-btn {
+    width: 20px;
+    float: right;
+    margin-right: 15px;
+}
+
+.add-btn {
+    width: 30px;
+    float: right;
+}
+
+.edit-input {
+    margin-top: 10px;
+    height: 70vh;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+.save-btn {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
 }
